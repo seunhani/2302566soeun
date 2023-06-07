@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Sunflower:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+        background: url("background.jpeg") center/cover;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      section {
+        width: 1200px;
+        padding: 20px 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      ul li a {
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      ul li a:hover {
+        color: red;
+      }
+
+      table {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      th {
+        padding: 10px 12px;
+        background-color: lightgrey;
+        border: 1px solid black;
+        letter-spacing: 0.8em;
+        font-weight: 600;
+      }
+
+      .th {
+        padding: 10px 12px;
+        background-color: lightgrey;
+        border: 1px solid black;
+        font-weight: 600;
+      }
+
+      td {
+        padding: 10px 12px;
+        border: 1px solid black;
+      }
+
+      .oneRow {
+        width: 30px;
+        text-align: center;
+        line-height: 2rem;
+      }
+
+      footer p {
+        font-size: 21px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+      }
+
+      .true {
+        font-size: 18px;
+        color: grey;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .photo {
+        width: 150px;
+        height: 100%;
+        background: url("pic.jpg") center/cover;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #profile tbody td {
+        background-color: white;
+      }
+
+      #profile tbody td.photo {
+        background-color: transparent;
+      }
+
+      #profile tbody td.th {
+        background-color: #189cc4;
+        color: #fff;
+      }
+
+      #edu tbody th {
+        background-color: hotpink;
+        color: #fff;
+        font-family: "Nanum Gothic", sans-serif;
+        font-weight: 400;
+      }
+
+      #edu tbody td {
+        font-family: "Nanum Gothic", sans-serif;
+        font-weight: 400;
+        background-color: white;
+      }
+
+      #certificate tbody th {
+        background-color: yellowgreen;
+        color: #fff;
+        font-family: "Sunflower", sans-serif;
+      }
+
+      #certificate tbody td {
+        background-color: white;
+        font-family: "Sunflower", sans-serif;
+        font-weight: 300;
+      }
+
+      #career tbody th {
+        background-color: pink;
+        color: #fff;
+      }
+
+      #career tbody td {
+        background-color: white;
+      }
+
+      .true {
+        color: #141414;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>이 력 서</h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#profile">신상</a>
+          </li>
+          <li>
+            <a href="#edu">학력</a>
+          </li>
+          <li>
+            <a href="#certificate">경력</a>
+          </li>
+          <li>
+            <a href="#career">수상</a>
+          </li>
+        </ul>
+      </nav>
+      <table id="profile">
+        <tbody>
+          <tr>
+            <td rowspan="5" class="photo"></td>
+            <td rowspan="3" class="th">성명</td>
+            <td>(한글) 윤소은</td>
+            <td class="th">지원분야</td>
+            <td>개발자</td>
+          </tr>
+          <tr>
+            <td>(한자) ㅇㅇㅇ</td>
+            <td class="th">연락처</td>
+            <td>010-1234-5678</td>
+          </tr>
+          <tr>
+            <td>(영어) yoonsoeun</td>
+            <td class="th">e-mail</td>
+            <td>abc123456@naver.com</td>
+          </tr>
+          <tr>
+            <td class="th">생년월일</td>
+            <td>2004.03.02</td>
+            <td class="th">보훈대상</td>
+            <td>대상( ), 비대상(o)</td>
+          </tr>
+          <tr>
+            <td class="th">주소</td>
+            <td colspan="3">서울특별시 ㅇㅇ구 ㅇㅇㅇㅇ</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="edu">
+        <tbody>
+          <tr>
+            <th rowspan="4" class="oneRow">
+              <p>학력사항</p>
+            </th>
+            <th>기간</th>
+            <th>출신학교</th>
+            <th>전공</th>
+            <th>학점</th>
+            <th>졸업여부</th>
+          </tr>
+          <tr>
+            <td>2023.03 ~</td>
+            <td>한양여자대학교</td>
+            <td>빅데이터과</td>
+            <td>-</td>
+            <td>재학</td>
+          </tr>
+          <tr>
+            <td>2020.03 ~ 2023.02</td>
+            <td>OO고등학교</td>
+            <td>X</td>
+            <td>X</td>
+            <td>졸업</td>
+          </tr>
+          <tr>
+            <td>2016.03 ~ 2019.02</td>
+            <td>OO중학교</td>
+            <td>X</td>
+            <td>X</td>
+            <td>졸업</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="certificate">
+        <tbody>
+          <tr>
+            <th rowspan="4" class="oneRow">자격면허</th>
+            <th>자격증(면허)명</th>
+            <th>등급</th>
+            <th>취급년월일</th>
+            <th>발행기관</th>
+          </tr>
+          <tr>
+            <td>OOOOOO</td>
+            <td>-등급</td>
+            <td>2021.1.30</td>
+            <td>한국ooooo</td>
+          </tr>
+          <tr>
+            <td>OOOOOO</td>
+            <td>-등급</td>
+            <td>2022.4.23</td>
+            <td>한국ooooo</td>
+          </tr>
+          <tr>
+            <td>OOOOO</td>
+            <td>-등급</td>
+            <td>2023.5.10</td>
+            <td>한국ooooo</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="career">
+        <tbody>
+          <tr>
+            <th rowspan="3" class="oneRow">경력사항</th>
+            <th>기관명</th>
+            <th>기간</th>
+            <th>업무내용</th>
+          </tr>
+          <tr>
+            <td>OOOOOOOOOOO</td>
+            <td>2019.03 ~ 2021.02</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>OOOOOOOOOO</td>
+            <td>2020.07.04 ~ 2021.09.12</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <audio
+        style="display: flex; justify-content: center; margin: 0 auto"
+        src="seventeen.m4a"
+        controls
+        autoplay
+        muted
+        loop
+        preload="metadata"
+      ></audio>
+      <p class="true">위 기재 사항은 사실과 틀림이 없습니다.</p>
+      <footer>
+        <p>윤소은/2302566</p>
+      </footer>
+    </section>
+  </body>
+</html>
